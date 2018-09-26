@@ -1,7 +1,5 @@
 FROM alpine:3.4 
 MAINTAINER Alexandr Ivanov ivanov.ua@ukr.net
-RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \
-    echo "http://dl-4.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
 RUN apk update && apk add openvpn openvpn-dev autoconf re2c libtool \
 	openldap-dev openssl-dev gcc-objc make git openssl easy-rsa iptables bash
 RUN git clone https://github.com/snowrider311/openvpn-auth-ldap 
